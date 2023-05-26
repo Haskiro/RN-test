@@ -12,7 +12,7 @@ module.exports = function (api) {
             "@assets": "./src/assets",
             "@utils": "./src/utils",
             "@navigation": "./src/store",
-            "@types": "./src/types",
+            "@intarfaces": "./src/interfaces",
             "@hooks": "./src/hooks",
             "@constants": "./src/constants",
             "@data": "./src/data.json",

@@ -9,7 +9,7 @@
       "@assets/*": ["src/assets/*"],
       "@utils/*": ["src/utils/*"],
       "@navigation/*": ["src/store/*"],
-      "@types/*": ["src/types/*"],
+      "@interfaces*": ["src/interfaces/*"],
       "@hooks/*": ["src/hooks/*"],
       "@constants/*": ["src/constants/*"],
       "@data": ["src/data.json"]

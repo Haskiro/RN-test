@@ -6,7 +6,7 @@ import { transactionTypes } from "@constants/transactionTypes";
 import TabSwitch from "@components/tab-switch/TabSwitch";
 import Tab from "@components/tab/Tab";
 import transactions from "@data";
-import { ITransaction } from "@types/data.interface";
+import { ITransaction } from "@interfaces/data.interface";
 
 const Navigator: FC = () => {
   const [activeTab, setActiveTab] = useState<transactionTypes>(
