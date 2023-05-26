@@ -1,15 +1,15 @@
 import { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Navigator from "../pages/navigator/Navigator";
+import Navigator from "../screens/navigator/Navigator";
 import { screens } from "../constants/screens";
-import { Text } from "react-native/types";
+import Home from "../screens/home/Home";
 
 const Navigation: FC = () => {
   const Stack = createStackNavigator();
 
   return (
-    <Stack.Navigator>
-      <Stack.Screen name={screens.HOME} component={() => <Text>Home</Text>} />
+    <Stack.Navigator initialRouteName={screens.NAVIGATOR}>
+      <Stack.Screen name={screens.HOME} component={Home} />
       <Stack.Screen name={screens.NAVIGATOR} component={Navigator} />
     </Stack.Navigator>
   );

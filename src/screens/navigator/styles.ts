@@ -7,4 +7,8 @@ export default StyleSheet.create({
     borderColor: "black",
     borderRadius: 5,
   },
+
+  list: {},
+
+  item: {},
 });
