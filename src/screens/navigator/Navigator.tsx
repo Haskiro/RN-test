@@ -13,13 +13,19 @@ const Navigator: FC = () => {
   );
 
   return (
-    <View>
+    <View style={styles.container}>
+      <View style={styles.switchList}>
+        {Object.values(transactionTypes).map((item) => (
+          <TabSwitch
+            key={item}
+            title={item}
+            isActive={activeTab === item}
+            setActiveTab={setActiveTab}
+          />
+        ))}
+      </View>
       <View>
-        <FlatList
-          style={styles.list}
-          data={Object.values(transactionTypes)}
-          renderItem={({ item }) => <TabSwitch title={item}></TabSwitch>}
-        />
+        <Text>Content</Text>
       </View>
     </View>
   );

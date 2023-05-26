@@ -1,16 +1,22 @@
 import { FC } from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
+import { transactionTypes } from "../../constants/transactionTypes";
 
 export interface ITabSwitchProps {
   title: string;
+  isActive: boolean;
+  setActiveTab: (value: transactionTypes) => void;
 }
 
-const TabSwitch: FC<ITabSwitchProps> = ({ title }) => {
+const TabSwitch: FC<ITabSwitchProps> = ({ title, isActive, setActiveTab }) => {
   return (
-    <View style={styles.body}>
-      <Text>{title}</Text>
-    </View>
+    <TouchableOpacity
+      onPress={() => setActiveTab(title as transactionTypes)}
+      style={[styles.body, isActive && styles.active]}
+    >
+      <Text style={styles.text}>{title}</Text>
+    </TouchableOpacity>
   );
 };
 

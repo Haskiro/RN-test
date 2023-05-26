@@ -5,7 +5,12 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderStyle: "solid",
     borderColor: "black",
-    borderRadius: 5,
+    borderRadius: 20,
+  },
+
+  switchList: {
+    // width: "100%",
+    flexDirection: "row",
   },
 
   list: {},
