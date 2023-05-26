@@ -1,10 +1,23 @@
 import { FC } from "react";
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
+import styles from "./styles";
+import { screens } from "../../constants/screens";
+import { NavigationProp, ParamListBase } from "@react-navigation/native";
 
-const Home: FC = () => {
+export interface IHomeProps {
+  navigation: NavigationProp<ParamListBase>;
+}
+
+const Home: FC<IHomeProps> = ({ navigation }) => {
+  const handleButtonClick = () => {
+    navigation.navigate(screens.NAVIGATOR);
+  };
+
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={styles.body}>
+      <TouchableOpacity onPress={handleButtonClick} style={styles.button}>
+        <Text style={styles.text}>Go to Navigator</Text>
+      </TouchableOpacity>
     </View>
   );
 };

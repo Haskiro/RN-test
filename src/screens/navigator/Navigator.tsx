@@ -1,42 +1,42 @@
-import { FC, useState } from "react";
+import { FC, useMemo, useState } from "react";
 import styles from "./styles";
 
 import { View, Text } from "react-native";
 import { transactionTypes } from "../../constants/transactionTypes";
 import { FlatList } from "react-native-gesture-handler";
 import TabSwitch from "../../components/tab-switch/TabSwitch";
+import Tab from "../../components/tab/Tab";
+import transactions from "../../data.json";
+import { ITransaction } from "../../types/data.interface";
 
 const Navigator: FC = () => {
-  // const Tab = createMaterialTopTabNavigator();
   const [activeTab, setActiveTab] = useState<transactionTypes>(
     transactionTypes.INCOME
+  );
+
+  const filteredTransactions = useMemo(() => {
+    return transactions.data.filter(
+      (transaction) => transaction.type === activeTab.toLowerCase()
+    );
+  }, [activeTab, transactions]);
+
+  const renderTabSwitch = (item: transactionTypes) => (
+    <TabSwitch
+      key={item}
+      title={item}
+      isActive={activeTab === item}
+      setActiveTab={setActiveTab}
+    />
   );
 
   return (
     <View style={styles.container}>
       <View style={styles.switchList}>
-        {Object.values(transactionTypes).map((item) => (
-          <TabSwitch
-            key={item}
-            title={item}
-            isActive={activeTab === item}
-            setActiveTab={setActiveTab}
-          />
-        ))}
+        {Object.values(transactionTypes).map(renderTabSwitch)}
       </View>
-      <View>
-        <Text>Content</Text>
-      </View>
+      <Tab transactions={filteredTransactions as ITransaction[]} />
     </View>
   );
-  // (
-  //   <Tab.Navigator sceneContainerStyle={styles.container}>
-  //     <Tab.Screen name="Income" component={TabComponent} />
-  //     <Tab.Screen name="Outcome" component={TabComponent} />
-  //     <Tab.Screen name="Loans" component={TabComponent} />
-  //     <Tab.Screen name="Invetment" component={TabComponent} />
-  //   </Tab.Navigator>
-  // );
 };
 
 export default Navigator;

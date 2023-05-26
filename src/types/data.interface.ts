@@ -1,7 +1,7 @@
 export interface ITransaction {
   type: "income" | "outcome" | "loan" | "investment";
   _id: string;
-  amount: number;
+  amount: number | string;
   name: IName;
   company: string;
   email: string;

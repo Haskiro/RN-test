@@ -6,6 +6,7 @@ export default StyleSheet.create({
     borderStyle: "solid",
     borderColor: "black",
     borderRadius: 20,
+    marginVertical: 20,
   },
 
   switchList: {

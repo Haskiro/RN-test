@@ -18,7 +18,6 @@ export default StyleSheet.create({
 
   text: {
     textAlign: "center",
-    whiteSpace: "nowrap",
     fontSize: 11,
   },
 });

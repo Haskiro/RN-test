@@ -1,6 +1,6 @@
 export enum transactionTypes {
   INCOME = "Income",
   OUTCOME = "Outcome",
-  LOANS = "Loans",
+  LOAN = "Loan",
   INVESTMENT = "Investment",
 }

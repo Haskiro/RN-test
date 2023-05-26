@@ -9,7 +9,7 @@ const Navigation: FC = () => {
   const Stack = createStackNavigator();
 
   return (
-    <Stack.Navigator initialRouteName={screens.NAVIGATOR}>
+    <Stack.Navigator initialRouteName={screens.HOME}>
       <Stack.Screen name={screens.HOME} component={Home} />
       <Stack.Screen
         name={screens.NAVIGATOR}
