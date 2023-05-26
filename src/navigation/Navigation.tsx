@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Navigator from "../screens/navigator/Navigator";
-import { screens } from "../constants/screens";
-import Home from "../screens/home/Home";
-import Container from "../components/container/Container";
+import Navigator from "@screens/navigator/Navigator";
+import { screens } from "@constants/screens";
+import Home from "@screens/home/Home";
+import Container from "@components/container/Container";
 
 const Navigation: FC = () => {
   const Stack = createStackNavigator();

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { FlatList, View, Text } from "react-native";
 import styles from "./styles";
-import { ITransaction } from "../../types/data.interface";
+import { ITransaction } from "@types/data.interface";
 import React from "react";
 
 export interface ITabProps {

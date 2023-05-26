@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
-import { screens } from "../../constants/screens";
+import { screens } from "@constants/screens";
 import { NavigationProp, ParamListBase } from "@react-navigation/native";
 
 export interface IHomeProps {

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
-import { transactionTypes } from "../../constants/transactionTypes";
+import { transactionTypes } from "@constants/transactionTypes";
 
 export interface ITabSwitchProps {
   title: string;
